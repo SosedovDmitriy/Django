@@ -10,3 +10,6 @@ def about(request):
 
 def profile(request):
     return HttpResponse("<h4>Профиль</h4>")
+
+def test(request):
+    return HttpResponse("<h4>Test</h4>")
