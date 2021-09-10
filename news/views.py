@@ -1,10 +1,19 @@
 from django.shortcuts import render
-from datetime import datetime
 from .models import Articles
+from .forms import ArticlesForm
+
+
 
 def news_home(request):
-    #p = Articles(title='Dima', anons="HUI", full_text="asdasdasd",date=datetime.now())
-    #p.save()
-    news=Articles.objects.all()
-    print(news)
+    news=Articles.objects.order_by('title')
     return render(request, 'news/news_home.html', {"news":news})
+
+def create(request):
+    form = ArticlesForm()
+    
+    data = {
+        'form': form
+    }
+
+    return render (request, 'news/create.html', data)
+

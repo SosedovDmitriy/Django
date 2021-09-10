@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+<h1>Создание новости</h1>
+{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>Создание новости</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+
+        <input type="text" placeholder="Название статьи" class="form-control"><br>
+        <input type="text" placeholder="Анонс статьи" class="form-control"><br>
+        <textarea class="form-control" placeholder="Текст статьи"></textarea><br>
+        <button class="btn btn-success" type="submit">Добавить статью</button>
+    </form>
+
+</div>
+{% endblock %}

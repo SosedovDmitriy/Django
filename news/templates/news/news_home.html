@@ -6,11 +6,13 @@
 
 {% block content %}
 <div class="features">
-    <h1>Новости на сайте</h1>    
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti a facilis maiores eveniet necessitatibus natus reprehenderit ullam? Velit asperiores voluptatum aperiam, quod voluptate nihil dolores delectus? Corporis corrupti quod rem.</p>
-    <button class="btn btn-danger">Нажми</button>
+    <h1>Новости на сайте</h1>        
+    
     {% for n in news %}
-        <h5>{{ n.title }}</h5>
+        <h3>{{ n.title }}</h3>
+        <p>{{ n.anons }}</p>
+        <h5>{{ n.full_text }}</h5>
     {% endfor %}
+    <button class="btn btn-danger">Нажми</button>
 </div>
 {% endblock %}
