@@ -7,7 +7,7 @@ aside {
     background: #181818;
     width: 23%;
     padding: 2.5%;
-    height: 100vh;
+    height: 850px;
     color: #fff;
     border-right: 5px solid #4d4d4d;
 }
@@ -46,10 +46,10 @@ aside ul li:hover, ul a:hover {
     transform: scale(1.05);
 }
 
-    .features {
+.features {
     float:left;
     color: #fff;
-    margin-top: 100px;
+    margin-top: 50px;
     text-align: center;
     width: 75%;
 }
@@ -62,3 +62,17 @@ form {
     width: 500px;
     margin-top: 50px;
 }
+
+.alert-warning {
+    float: none;
+    clear:both;
+    height: 100%;
+    margin: 1m;
+    text-align: left;
+    
+}
+.features p {
+    max-width: none;
+    margin: 20px auto;
+}
+
